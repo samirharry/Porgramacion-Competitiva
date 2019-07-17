@@ -8,13 +8,10 @@ typedef long double ld;
 using namespace std;
 
 int main(){  
-    ll y,k,n;
-    cin>>y>>k>>n;
-    ll a=y/k+1,b=n/k;
-    if(b-a<0) {
-        cout<<-1<<endl;
-        return 0;
-    }
-    for(ll i=a;i<=b;i++)  cout<<k*i-y<<" ";
+   ll a,b;
+   cin>>a>>b;
+   if(a==0 && b==0)cout<<"NO"<<endl;
+    else if(abs(a-b)<=1) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
     return 0;
 }
