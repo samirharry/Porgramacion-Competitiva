@@ -31,6 +31,8 @@ int main(){
                 answ = i;
                 break;
             }
+
+            
         }
         cout<<answ<<endl;
         if(n>=1) cout<<endl;
