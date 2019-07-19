@@ -8,14 +8,15 @@ typedef long double ld;
 using namespace std;
 
 vector<string> splitString(string aux, char sepa){
-    ll tam = (ll )aux.length();
-    vector<string> answer;
-    string coloca = "";
-    for(ll i=0;i<tam;i++){
-        if(aux[i] == ' '){
-            answer.push_back(coloca);
-            coloca.clear();
-        }
+	ll tam = (ll )aux.length();
+	vector<string> answer;
+	string coloca = "";
+	for(ll i=0;i<tam;i++){
+		if(aux[i] == ' '){
+			answer.push_back(coloca);
+			coloca.clear();
+			continue;
+		}
         coloca.push_back(aux[i]);
     }
     answer.push_back(coloca);
@@ -23,27 +24,38 @@ vector<string> splitString(string aux, char sepa){
 }
 
 int main(){
-    ll n;
+    ll n,idd;
     cin>>n;
+    idd=n-1;
     ll cases=0;
     string aux;
-    getline(cin,aux);   
+    getline(cin,aux);
+	bool notNo = true;
     while(n--){
+        if(notNo)getline(cin,aux);
         cout<<"Case #"<<++cases<<":"<<endl;
-        while(true){
+        bool isas = true;
+		while(true){
             getline(cin,aux);
-            if(aux == "") break;
+            if(aux == ""){
+				notNo = false;
+				isas = false;
+			}
             vector <string> palabras = splitString(aux,' ');
             string mess = "";
             ll itAct = 0;
             for(ll i =0;i<(ll)palabras.size();i++){
                 if(itAct>(ll)palabras[i].length()-1) continue;
                 mess.push_back(palabras[i][itAct]);
-                itAct++;
+			    itAct++;
             }
-            cout<<mess<<endl;
+            if(isas) cout<<mess<<endl;
+			else break;
         }
+		if(n>=1){
+
+        cout<<endl;
+		}
     }
-      
     return 0;
 }
