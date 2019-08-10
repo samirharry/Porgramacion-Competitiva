@@ -7,13 +7,15 @@ typedef long double ld;
 
 using namespace std;
 
+//// SOlucion mandada por samirharry
+
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	ll t;
-	cin>>t;
-	while(t--){
+	ll q;
+	cin>>q;
+	while(q--){
 		ll n;
 		cin>>n;
 		ll A[n],B[n];

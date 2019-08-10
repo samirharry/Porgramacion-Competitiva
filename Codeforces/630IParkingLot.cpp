@@ -31,11 +31,6 @@ int main()
 	cout.tie(NULL);
 	ll n;
 	cin >> n;
-	if (n > 3)
-	{
-		cout<<( fastpow(4,n-3) * 33)<<endl;
-	}else{
-		cout<<24<<endl;
-	}
+	cout<<( fastpow(4,n-3)*(24+(n-3)*9))<<endl;
 	return 0;
 }

@@ -7,6 +7,7 @@ typedef long double ld;
 
 using namespace std;
 
+// codigo sended por samirharry
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
@@ -17,11 +18,8 @@ int main(){
 		ll n,k;
 		cin>>n>>k;
 		ll m = n/k/k;
-		if(m*k*k == n){
-			cout<<"NO"<<endl;
-		}else{
-			cout<<"YES"<<endl;
-		}
+		if(m*k*k == n) cout<<"NO"<<endl;
+		else cout<<"YES"<<endl;
 	}
 	return 0;
 }

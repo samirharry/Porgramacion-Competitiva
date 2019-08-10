@@ -37,11 +37,9 @@ int main(){
 		for(ll i=1;i<=n;i++){
 			if(arrAct[i] != arrZom[i]) {answr = false; break;}
 		}
-		if(answr){
-			cout<<"YES"<<endl;
-		}else{
-			cout<<"NO"<<endl;
-		}
+		if(answr) cout<<"YES"<<endl;
+		else cout<<"NO"<<endl;
 	}
 	return 0;
+	/// a smksamd
 }
