@@ -1,0 +1,100 @@
+A
+aux => ACCCBB
+comparator => ABBCCC
+answ => 100001
+aux => ACCCBB
+comparator => ABBCCC
+answ => 4
+aux => ACCCBB
+comparator => ACCCBB
+answ => 4
+aux => ACCCBB
+comparator => ACCCBB
+answ => 0
+aux => ACCCBB
+comparator => ABBCCC
+answ => 0
+aux => ACCCBB
+comparator => ACCCBB
+answ => 0
+0
+A
+aux => ADBC
+comparator => ABCD
+answ => 100001
+aux => ADBC
+comparator => ABDC
+answ => 3
+aux => ADBC
+comparator => ACBD
+answ => 2
+aux => ADBC
+comparator => ACDB
+answ => 2
+aux => ADBC
+comparator => ADBC
+answ => 2
+aux => ADBC
+comparator => ADCB
+answ => 0
+0
+A
+aux => ACACCCC
+comparator => AACCCCC
+answ => 100001
+aux => ACACCCC
+comparator => AACCCCC
+answ => 2
+aux => ACACCCC
+comparator => AACCCCC
+answ => 2
+aux => ACACCCC
+comparator => AACCCCC
+answ => 2
+aux => ACACCCC
+comparator => AACCCCC
+answ => 2
+aux => ACACCCC
+comparator => AACCCCC
+answ => 2
+2
+A
+aux => ABCABCABC
+comparator => AAABBBCCC
+answ => 100001
+aux => ABCABCABC
+comparator => AAABBBCCC
+answ => 6
+aux => ABCABCABC
+comparator => AAACCCBBB
+answ => 6
+aux => ABCABCABC
+comparator => AAACCCBBB
+answ => 6
+aux => ABCABCABC
+comparator => AAABBBCCC
+answ => 6
+aux => ABCABCABC
+comparator => AAACCCBBB
+answ => 6
+6
+A
+aux => ABCDABCDABCDABCD
+comparator => AAAABBBBCCCCDDDD
+answ => 100001
+aux => ABCDABCDABCDABCD
+comparator => AAAABBBBDDDDCCCC
+answ => 12
+aux => ABCDABCDABCDABCD
+comparator => AAAACCCCBBBBDDDD
+answ => 12
+aux => ABCDABCDABCDABCD
+comparator => AAAACCCCDDDDBBBB
+answ => 12
+aux => ABCDABCDABCDABCD
+comparator => AAAADDDDBBBBCCCC
+answ => 12
+aux => ABCDABCDABCDABCD
+comparator => AAAADDDDCCCCBBBB
+answ => 12
+12
