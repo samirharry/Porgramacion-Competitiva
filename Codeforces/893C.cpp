@@ -9,53 +9,36 @@ using namespace std;
 typedef long long ll;
 
 const ll MX = 100001;
-ll answer = 0;
+
 struct Graph
 {
 	vector<ll> adj[MX];
-	bool hasCat[MX] = {false};
-	bool isVis[MX] = {false};
+
+	ll res[MX] = {10000000001};
+	bool vis[MX] = {false};
+
 	void addEdge(ll u, ll v)
 	{
 		adj[u].push_back(v);
 		adj[v].push_back(u);
 	}
 
-	void bringCat(ll v)
+	ll minSolvedfs(ll u)
 	{
-		hasCat[v] = true;
-	}
-	void dfs(ll u, ll cats, ll maximCats)
-	{
-		isVis[u] = true;
-
-		if (hasCat[u])
-		{
-			cats++;
-		}
-		else
-		{
-			cats = 0;
-		}
-		if (cats > maximCats)
-		{
-			return;
-		}
-		if (adj[u].size() == 1 && isVis[adj[u][0]])
-		{
-			answer++;
-		}
+		vis[u] = true;
+		ll minimo = res[u];
 		for (ll v : adj[u])
-
 		{
-			if (!isVis[v])
+
+			if (!vis[v])
 			{
-				dfs(v, cats, maximCats);
+				ll costo = minSolvedfs(v);
+				minimo = min(costo, minimo);
 			}
 		}
+		return minimo;
 	}
 };
-
 Graph G;
 
 int main()
@@ -64,20 +47,23 @@ int main()
 	cin >> n >> m;
 	for (ll i = 0; i < n; i++)
 	{
-		ll aux;
-		cin >> aux;
-		if (aux == 1)
-		{
-			G.bringCat(i + 1);
-		}
+		cin >> G.res[i + 1];
 	}
-	for (ll i = 1; i < n; i++)
+
+	for (ll i = 0; i < m; i++)
 	{
 		ll u, v;
 		cin >> u >> v;
 		G.addEdge(u, v);
 	}
-	G.dfs(1, 0, m);
+	ll answer = 0;
+	for (ll i = 1; i <= n; i++)
+	{
+		if (!G.vis[i])
+		{
+			answer += G.minSolvedfs(i);
+		}
+	}
 	cout << answer << endl;
 	return 0;
 }
