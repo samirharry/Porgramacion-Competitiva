@@ -1,7 +1,2 @@
-+Mike
-Mike:hello
-+Kate
-+Dmitry
--Dmitry
-Kate:hi
--Kate
+3
+1 2 3
