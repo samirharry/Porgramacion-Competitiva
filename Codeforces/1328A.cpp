@@ -9,8 +9,17 @@ using namespace std;
 typedef long long ll;
 int main()
 {
-	ll n;
-	cin >> n;
-
+	ll t;
+	cin >> t;
+	while (t--)
+	{
+		ll a, b;
+		cin >> a >> b;
+		ll res = a % b;
+		if (res == 0)
+			cout << res << endl;
+		else
+			cout << b - res << endl;
+	}
 	return 0;
 }

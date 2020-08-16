@@ -9,8 +9,8 @@ using namespace std;
 typedef long long ll;
 int main()
 {
-	ll n;
-	cin >> n;
-
+	ll x1, y1, x2, y2;
+	cin >> x1 >> y1 >> x2 >> y2;
+	if(x)
 	return 0;
 }

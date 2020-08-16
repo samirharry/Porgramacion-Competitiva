@@ -9,8 +9,14 @@ using namespace std;
 typedef long long ll;
 int main()
 {
-	ll n;
-	cin >> n;
 
+	int n, t;
+	cin>>n>>t;
+	if(n==1 && t == 10) cout<<-1<<endl;
+	else{
+		cout<<t;
+		if(t==10) n--;
+		for(int i=0;i<n-1;i++) cout<<0;
+	}
 	return 0;
 }
